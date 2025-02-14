@@ -9,6 +9,15 @@ Description: Lab 3 Part 2 style for a cool box
 html {
     font-family: sans-serif;
   }
-  
   /* Your CSS below here */
-  
+  div {
+    color: white;
+    font-size: larger;
+    text-align: center;
+    margin: auto;
+    width: 200px;
+    height: 150px;
+    background-color: red;
+    border: 1px solid darkred;
+    
+  }

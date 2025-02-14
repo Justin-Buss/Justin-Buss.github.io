@@ -1,16 +1,25 @@
+/*
+Name: Justin Buss
+File: biblio-page.css
+Date: 14 Febuary 2025
+Date last Modified: 14 Febuary, 2025
+Description: Lab 3 Part 1 style guide for biblioagraphy page
+*/
+
 body {
     font-family: Arial, Helvetica, sans-serif;
   }
   
   h1 {
-    color: #375e97;
+    color: hotpink;
     font-size: 2em;
     font-family: Georgia, "Times New Roman", Times, serif;
-    border-bottom: 1px solid #375e97;
+    border-bottom: 10px dotted purple;
   }
   
   h2 {
     font-size: 1.5em;
+    font-style: italic;
   }
   
   .job-title {
@@ -25,5 +34,12 @@ body {
   
   a:hover {
     text-decoration: none;
+    color: green;
+  }
+
+  ul {
+    padding: 20px;
+    background-color: #eeeeee;
+    border: 5px solid purple;
   }
   

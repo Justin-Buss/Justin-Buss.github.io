@@ -18,40 +18,41 @@ function randomValueFromArray(array){
 
 //2. RAW TEXT STRINGS
 
-storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.'
-
-insertX = [
-    'Willy the Goblin',
-    'Big Daddy',
-    'Father Christmas']
-
-insertY = [
-    'the soup kitchen',
-    'Disneyland',
-    'the White House']
-
-insertZ = [
-    'spontaneously combusted',
-    'melted into a puddle on the sidewalk',
-    'turned into a slug and crawled away']
+storyText = 'It was 94 fahrenheit outside, so :insertCharacter: went for a walk. When they got to :insterLocation:, they stared in horror for a few moments, then :insertEvent:. :name: saw the whole thing, but was not surprised — :insertCharacter: weighs 300 pounds, and it was a hot day.'
+//Character array
+characterArray = ['Willy the Goblin', 'Big Daddy', 'Father Christmas'];
+//Location array
+locationArray = ['the soup kitchen', 'Disneyland', 'the White House'];
+//Event array
+eventArray = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
 
 //3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION
-
 randomize.addEventListener('click', result);
 
 function result() {
+    newStory = storyText;
+    //selects a random choice from the lost of arrays
+    insertCharacter = randomValueFromArray(characterArray);
+    insertLocation = randomValueFromArray(locationArray);
+    insertEvent = randomValueFromArray(eventArray);
 
+  //if custom name not blank, replace customName with inserted name
   if(customName.value !== '') {
     const name = customName.value;
-
-  }
+    newStory = newStory.replaceALL('Bob', name)
+  }//else name is Bob
 
   if(document.getElementById("uk").checked) {
     const weight = Math.round(300);
     const temperature =  Math.round(94);
-
   }
 
-  story.textContent = ;
+
+  newStory = newStory.replaceALL(':insertCharcter:', insertCharacter);
+  newStory = newStory.replaceALL(':insertLocation:', insertLocation);
+  newStory = newStory.replaceALL(':insertEvent', insertEvent);
+
+
+  story.textContent = newStory;
   story.style.visibility = 'visible';
 }

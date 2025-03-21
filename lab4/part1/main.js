@@ -43,8 +43,10 @@ function result() {
   }//else name is Bob
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round(300);
-    const temperature =  Math.round(94);
+    const weight = Math.round(300/14);
+    const temperature =  Math.round((94-32)/1.8);
+    newStory = newStory.replaceALL('300 pounds', weight + ' stones')
+    newStory = newStory.replaceALL('94 fahrenheit', temperature + ' centigrade')
   }
 
 

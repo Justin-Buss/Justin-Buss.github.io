@@ -1,3 +1,11 @@
+// <!--
+// Name: Justin Buss
+// File: index.html
+// Date Created: April 4, 2025
+// Date last modified: April 4, 2025
+// Description: A program to bounce balls around the screen
+// -->
+
 // set up canvas
 
 const canvas = document.querySelector("canvas");

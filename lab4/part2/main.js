@@ -3,7 +3,7 @@
 // File: index.html
 // Date Created: April 4, 2025
 // Date last modified: April 4, 2025
-// Description: A generator to create a silly story.
+// Description: A image display that you can swap between
 // -->
 
 

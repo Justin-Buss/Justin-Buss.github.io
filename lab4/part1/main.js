@@ -18,7 +18,7 @@ function randomValueFromArray(array){
 
 //2. RAW TEXT STRINGS
 
-storyText = 'It was 94 fahrenheit outside, so :insertCharacter: went for a walk. When they got to :insterLocation:, they stared in horror for a few moments, then :insertEvent:. :name: saw the whole thing, but was not surprised — :insertCharacter: weighs 300 pounds, and it was a hot day.'
+storyText = 'It was 94 fahrenheit outside, so :insertCharacter: went for a walk. When they got to :insertCharacter:, they stared in horror for a few moments, then :insertEvent:. Bob saw the whole thing, but was not surprised — :insertCharacter: weighs 300 pounds, and it was a hot day.'
 //Character array
 characterArray = ['Willy the Goblin', 'Big Daddy', 'Father Christmas'];
 //Location array
@@ -39,20 +39,20 @@ function result() {
   //if custom name not blank, replace customName with inserted name
   if(customName.value !== '') {
     const name = customName.value;
-    newStory = newStory.replaceALL('Bob', name)
+    newStory = newStory.replaceAll('Bob', name)
   }//else name is Bob
 
   if(document.getElementById("uk").checked) {
     const weight = Math.round(300/14);
     const temperature =  Math.round((94-32)/1.8);
-    newStory = newStory.replaceALL('300 pounds', weight + ' stones')
-    newStory = newStory.replaceALL('94 fahrenheit', temperature + ' centigrade')
+    newStory = newStory.replaceAll('300 pounds', weight + ' stones')
+    newStory = newStory.replaceAll('94 fahrenheit', temperature + ' centigrade')
   }
 
 
-  newStory = newStory.replaceALL(':insertCharcter:', insertCharacter);
-  newStory = newStory.replaceALL(':insertLocation:', insertLocation);
-  newStory = newStory.replaceALL(':insertEvent', insertEvent);
+  newStory = newStory.replaceAll(':insertCharacter:', insertCharacter);
+  newStory = newStory.replaceAll(':insertLocation:', insertLocation);
+  newStory = newStory.replaceAll(':insertEvent:', insertEvent);
 
 
   story.textContent = newStory;

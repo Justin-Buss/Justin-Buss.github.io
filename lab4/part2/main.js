@@ -26,12 +26,16 @@ const altText = {'pic1.jpg':'Closeup of a human eye',
 }
 /* Looping through images */
 
-for(image of imageArray){
+for(let image of imageArray){
     const newImage = document.createElement('img');
-    newImage.setAttribute('src', imageArray[image]);
+    newImage.setAttribute('src', 'images/' + image);
     newImage.setAttribute('alt', altText[image]);
     thumbBar.appendChild(newImage);
-    newImage.addEventListener
+
+    newImage.addEventListener('click', () =>{
+        displayedImage.src = 'images/' + image;
+        displayedImage.alt = altText[image];
+    })
 }
 /* Wiring up the Darken/Lighten button */
 

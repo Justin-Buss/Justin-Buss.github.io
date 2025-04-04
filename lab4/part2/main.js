@@ -28,23 +28,23 @@ const altText = {'pic1.jpg':'Closeup of a human eye',
 
 for(image of imageArray){
     const newImage = document.createElement('img');
-    newImage.setAttribute('src', imageArray);
-    newImage.setAttribute('alt', altText);
+    newImage.setAttribute('src', imageArray[image]);
+    newImage.setAttribute('alt', altText[image]);
     thumbBar.appendChild(newImage);
     newImage.addEventListener
 }
 /* Wiring up the Darken/Lighten button */
 
-btn.addEventListener('click', toggleDark)
+btn.addEventListener('click', (toggleDark));
 
 function toggleDark(){
-    if(btn.getAttribute('class')=='dark'){
-        btn.setAttribute('class','light')
-        btn.textContent('Lighten')
-        overlay.computedStyleMap.backgroundColor = "rgb(0 0 0 / 50%)"
+    if(btn.getAttribute('class')==='dark'){
+        btn.setAttribute('class','light');
+        btn.textContent = 'Lighten';
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
     }else{
-        btn.setAttribute('class', 'dark')
-        btn.textContent('Darken')
-        overlay.computedStyleMap.backgroundColor = "rgb(0 0 0 / 0%)"
-    }
+        btn.setAttribute('class', 'dark');
+        btn.textContent = 'Darken';
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+        }
 }

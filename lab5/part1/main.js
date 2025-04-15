@@ -1,7 +1,7 @@
 // Name: Justin Buss
 // File: main.js
 // Date Created: April 11, 2025
-// Date last modified: April 11, 2025
+// Date last modified: April 14, 2025
 // Description: A website about bears.
 
 // functionality for showing/hiding the comments section

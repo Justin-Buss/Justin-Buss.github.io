@@ -2,7 +2,7 @@
 Name: Justin Buss
 File: style.css
 Date Created: April 11, 2025
-Date last modified: April 11, 2025
+Date last modified: April 14, 2025
 Description: A website about bears.
 */
 
@@ -60,7 +60,7 @@ p, li, table {
 /* || header layout */
 
 div[class="nav"], article, footer, .secondary {
-  background-color: green;
+  background-color: white;
 }
 
 article, footer, .secondary {
